@@ -75,7 +75,7 @@ const Hero = ({ mode }) => {
         style={mode ? { backgroundColor: "black" } : { backgroundColor: "" }}
         className="hero-center"
       >
-        <h1>Your Todo</h1>
+        <h1>Your Note</h1>
         <h4 style={mode ? { color: "white" } : { color: "black" }}>
           Welcome <span style={{ color: "#44da80" }}>{name}!</span>
         </h4>
