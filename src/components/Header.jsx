@@ -9,7 +9,7 @@ const Header = (props) => {
     <div className={mode === true ? "dark-head" : "header"}>
       <div className="header-banner">
         <div className="logo">
-          <h3>makeTodo</h3>
+          <h3>makeNotes</h3>
         </div>
         <div className="dark">
           <i
