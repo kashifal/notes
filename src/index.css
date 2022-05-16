@@ -1,13 +1,248 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;700&display=swap');
+*
+{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+body{
+  background-color: #f1f1f1;
+}
+.header{
+  height: 70px;
+  width: 100%;
+  background-color: white; 
+
+  transition: .4s ease-in;
+}
+.header-banner{
+  height: 100%;
+  width: 86%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-banner h3 
+{
+  color: #44da80;
+  font-size: 22px;
+}
+.dark i{
+  margin-right: 15px;
+  padding: 6px;
+  font-size: 20px;
+  color: rgb(85, 85, 85);
+}
+.hero{  
+  height: 100vh;
+  transition: .3s ease-in;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+
+  justify-content: center; 
+}
+.hero-center{
+  height: auto;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  width: 560px;
+  background-color: #ffff;
+  text-align: center;transition: .3s ease-in;
+  padding: 30px; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hero-center h1{
+  color: #44da80;
+  font-weight: bold;
+}
+
+
+
+.todo {
+  height: 70px;transition: .3s ease-in;
+  margin-top: 8px;
+  display: flex;
+  transition: .2s ease;
+  background-color: #f1f1f1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo .check  {
+  width: 15%;
+  border-radius: 50%;
+}
+input[type='radio'] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: none;
+  border: 3px solid #44da80;
+}
+
+input[type='radio']:before {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin: 20% auto;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked:before {
+  background: #44da80;
+
+}
+
+input[type="radio"]:checked {
+  border-color: #44da80;
+}
+
+.todo .h5 {
+  width: 55%;
+  text-align: center; 
+  padding: 5px;
+  border: transparent;
+  font-weight: 700;
+  color: #585858;
+  border-bottom: 1px solid #44da80;
+  background-color: transparent; 
+  font-size: 20px;
+  outline: none;
+}
+.todo:hover{
+  transform: scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+.icons{
+  width: 30%;
+}
+.icons i{
+width: 50%;
+}
+
+.icons i:nth-child(1) { 
+  color: #44da80;
+}
+.icons i:nth-child(2) {
+  color: red;
+} 
+
+.input
+{
+  width: 100%; 
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input input{
+  padding: 12px 30px;
+  background-color: #f1f1f1;
+  border: transparent;
+  outline: none;
+  font-size: 16px;
+}
+.input button{
+  padding: 12px ;
+    background-color: #44da80;
+    border: transparent;
+    outline: none;font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+input[type="radio"]:checked label {
+  text-decoration: line-through;
+}
+
+.overlay
+{
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.514);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0%; 
+  z-index: 998;
+  
+  display: none;
+}
+.model{
+  height: 400px;
+    width: 450px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(1px);
+    position: fixed; 
+    position: absolute;
+    top: 50%;
+    display: none;
+    padding: 30px;
+    left: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    z-index: 999;  
+}
+.show{
+  display: block;
+}
+.model h1{
+  color: #44da80;
+  text-align: center;
+}
+.model input
+{
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  border: transparent;
+  background-color: #f1f1f1;
+  outline: none;
+}
+.model button {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  border: transparent;
+  background-color: #44da80;
+  color: white;
+}
+
+.dark-head {
+  height: 70px;
+  width: 100%;
+  background-color: #000000;
+  transition: .4s ease-in;
+}
+
+.dark-head .header-banner {
+  height: 100%;
+  width: 86%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-head .header-banner h3 {
+  color: #44da80;
+  font-size: 22px;
+}
+
+ .dark-head .dark i {
+  margin-right: 15px;
+  padding: 6px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+.fa-moon-o, .fa-sun-o
+{
+  transition: .3s ease-in;
 }
